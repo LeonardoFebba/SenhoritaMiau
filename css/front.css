@@ -6,8 +6,10 @@
 body, h1, h2, h3, p, ul{
     padding: 0px;
     margin: 0px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Modern Antiqua", serif;
 }
+
+
 
 /* End - Default configs */
 
@@ -17,17 +19,16 @@ body, h1, h2, h3, p, ul{
     font-family: "Modern Antiqua", serif;
     font-weight: 600;
     font-style: normal;
-  }
-  
+}
 
 .logo{
     width: 100%;
-    padding: 20px 0; /* Reduzi o padding para economizar espaço */
+    padding: 20px 0; 
     background-image: url(../img/logo.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: min(300px, 30vw); /* Usa o menor valor entre 300px e 30% da largura da viewport */
-    height: 120px; /* Altura fixa suficiente para a logo */
+    background-size: min(300px, 30vw); 
+    height: 120px; 
 }
 
 .menu-container{
@@ -79,20 +80,34 @@ body, h1, h2, h3, p, ul{
 
 /* End - Navbar configs */
 
+/*Banner*/
+
+.banner{
+    width: 100%;
+    height: 30vh;
+    background-color: black;
+}
+
+.banner h1{
+    color: white;
+    text-align: center;
+    padding-top: 5%;
+}
+
+/*Banner*/
+
+
+/* Category Columns */
 
 .container-sm .row{
     text-align: center;
-    width: 60%;
-    margin-left: 250px;
+    justify-content: center;
 }
 
-.divider h1{
+.divider h2{
     text-align: center;
+    text-transform: uppercase;
     padding: 40px 0;
-}
-
-.divider .row{
-    display: block !important;
 }
 
 .divider .col{
@@ -102,18 +117,78 @@ body, h1, h2, h3, p, ul{
     padding: 30px 0;
 }
 
-.category {
+/* .category {
     margin: 30px;
     background-image: url(../img/bg.png);
     background-repeat: no-repeat;
-    height: 300px;
+    background-size: cover;
+    background-position: center;
+    width: 1px;
+    height: 180px;
+} */
+
+.category {
+    height: 200px;
+    margin: 20px;
+    background-color: #111;
+    border: 2px solid #800080;
+    box-shadow: 0 0 10px #800080;
+    color: white;
+    border-radius: 12px;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category:hover {
+    box-shadow: 0 0 20px #ff00ff;
 }
 
 .category a {
-    color: white; /* Ou a cor que contrastar com seu fundo */
+    color: white;
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
     text-transform: uppercase;
+    padding: 15px 0px;
+}
+
+/* End Category Columns */
+
+/* saleItems */
+
+.saleItems h2{
+    text-align: center;
+    text-transform: uppercase;
     padding: 15px 30px;
 }
+
+/* end saleItems */
+
+
+/* infinite helper */
+
+.marquee-container {
+    overflow: hidden;
+    width: 100%;
+    background-color: #111;
+    padding: 20px 0;
+  }
+  
+  .marquee-track {
+    display: flex;
+    width: max-content;
+  }
+  
+  .marquee-item {
+    flex-shrink: 0;
+    padding: 0 40px;
+    color: white;
+    font-family: 'Modern Antiqua', serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+/* end infinite helper */
